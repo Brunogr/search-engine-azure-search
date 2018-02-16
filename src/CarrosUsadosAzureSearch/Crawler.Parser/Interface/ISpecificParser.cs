@@ -1,4 +1,4 @@
-﻿using Cook.Domain;
+﻿using CarrosUsadosAzureSearch.Domain.Models;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -6,10 +6,10 @@ using System.Text;
 
 namespace Cook.Crawler.Parser.Interface
 {
-    public interface ISpecificParser
+    public interface ICarroParser
     {
         bool IsPageValid(HtmlDocument htmlDocument);
 
-        Recipe ExtractRecipe(HtmlDocument htmlDocument);
+        Carro Extract(HtmlDocument htmlDocument);
     }
 }

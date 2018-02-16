@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Cook.Crawler.Core.Interface
+namespace Crawler.Core.Interface
 {
     public interface ICrawler
     {

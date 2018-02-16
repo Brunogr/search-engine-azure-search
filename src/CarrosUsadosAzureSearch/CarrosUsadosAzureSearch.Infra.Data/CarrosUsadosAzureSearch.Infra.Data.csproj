@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Search" Version="3.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CarrosUsadosAzureSearch.Domain\CarrosUsadosAzureSearch.Domain.csproj" />
+    <ProjectReference Include="..\Crawler.Core.Interface\Crawler.Core.Interface.csproj" />
   </ItemGroup>
 
 </Project>

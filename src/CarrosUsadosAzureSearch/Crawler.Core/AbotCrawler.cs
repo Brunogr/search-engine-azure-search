@@ -47,7 +47,7 @@ namespace Crawler.Core
                 else
                     Console.WriteLine("Crawl of {0} completed without error.", result.RootUri.AbsoluteUri);
 
-                _parser.SaveRecipes();
+                _parser.Save();
             }
         }
 
@@ -69,7 +69,7 @@ namespace Crawler.Core
 
             if (_parser.IsPageValid(e.CrawledPage.Content.Text))
             {
-                _parser.ExtractRecipe(e.CrawledPage.Content.Text);
+                _parser.Extract(e.CrawledPage.Content.Text);
             }            
         }
 

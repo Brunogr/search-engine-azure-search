@@ -1,8 +1,8 @@
-﻿using Cook.Crawler.Core.Interface;
-using Cook.Crawler.Core.Interface.Repository;
+﻿using CarrosUsadosAzureSearch.Domain.Models;
 using Cook.Crawler.Parser.Interface;
-using Cook.Domain;
 using Crawler.Core.Interface;
+using Crawler.Core.Interface.Repository;
+using Crawler.Parser;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -13,25 +13,25 @@ namespace Cook.Crawler.Parser.Base
 {
     public class ParserBase : IParser
     {
-        public List<Recipe> _recipes;
-        private ISpecificParser _parser;
-        private IRecipeRepository _recipeRepository;
+        public List<Carro> _carros;
+        private ICarroParser _parser;
+        private ICarroRepository _carroRepository;
 
-        public ParserBase(IRecipeRepository recipeRepository)
+        public ParserBase(ICarroRepository carroRepository)
         {
-            _recipeRepository = recipeRepository;
-            _recipes = new List<Recipe>();
+            _carroRepository = carroRepository;
+            _carros = new List<Carro>();
         }
 
-        public void ExtractRecipe(string html)
+        public void Extract(string html)
         {
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
 
-            var recipe = _parser.ExtractRecipe(doc);
+            var carro = _parser.Extract(doc);
 
-            if (!_recipes.Any(r => r.Nome == recipe.Nome))
-                _recipes.Add(recipe);
+            if (!_carros.Any(r => r.Nome == carro.Nome))
+                _carros.Add(carro);
         }
 
         public void IdentifyParser(string url)
@@ -47,26 +47,28 @@ namespace Cook.Crawler.Parser.Base
             return _parser.IsPageValid(doc);
         }
 
-        public ISpecificParser GetParser()
+        public ICarroParser GetParser()
         {
             return _parser;
         }
 
-        private ISpecificParser Factory(string url)
+        private ICarroParser Factory(string url)
         {
             switch (url.Split('.')[1])
             {
-                case "vovopalmirinha":
-                    return new PalmirinhaParser();
+                case "vrum":
+                    return new VrumParser();
+                case "autoline":
+                    return new AutolineParser();
                 default:
-                    return new PalmirinhaParser();
+                    return new VrumParser();
             }
         }
 
-        public void SaveRecipes()
+        public void Save()
         {
-            if (_recipes.Count > 0)
-                _recipeRepository.SaveRecipes(_recipes);
+            if (_carros.Count > 0)
+                _carroRepository.Save(_carros);
         }
     }
 }
