@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrosUsadosAzureSearch.Domain", "CarrosUsadosAzureSearch.Domain\CarrosUsadosAzureSearch.Domain.csproj", "{BCB8ABDB-83BA-4676-8064-4FC417EF2986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarrosUsadosAzureSearch.Domain", "CarrosUsadosAzureSearch.Domain\CarrosUsadosAzureSearch.Domain.csproj", "{BCB8ABDB-83BA-4676-8064-4FC417EF2986}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{267E718D-BE70-4012-8B4B-AD95E48013E7}"
 EndProject
@@ -17,19 +17,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parser", "Parser", "{93F61B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler.Core", "Crawler.Core\Crawler.Core.csproj", "{EE2C907D-EBA7-4610-809C-F59CD6E87F91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler.Core.Interface", "Crawler.Core.Interface\Crawler.Core.Interface.csproj", "{B18412BA-EEB1-4FE2-B50A-F76540C520A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawler.Core.Interface", "Crawler.Core.Interface\Crawler.Core.Interface.csproj", "{B18412BA-EEB1-4FE2-B50A-F76540C520A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler.Parser", "Crawler.Parser\Crawler.Parser.csproj", "{551FD1F4-B932-40D5-A772-33B9E6AE152A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{2FDA5067-5BFF-4483-B051-77D89B86E7FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler.Infra.IoC", "Crawler.Infra.IoC\Crawler.Infra.IoC.csproj", "{5588BEAD-4CEA-4718-90A0-A54DED54667E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawler.Infra.IoC", "Crawler.Infra.IoC\Crawler.Infra.IoC.csproj", "{5588BEAD-4CEA-4718-90A0-A54DED54667E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler.Exe", "Crawler.Exe\Crawler.Exe.csproj", "{95710A50-130F-47EC-BB6F-7D7F4C183823}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{EA6B7376-1656-4346-B6A5-1C6750377B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrosUsadosAzureSearch.Infra.Data", "CarrosUsadosAzureSearch.Infra.Data\CarrosUsadosAzureSearch.Infra.Data.csproj", "{88A41FC4-F473-4920-BC25-580183DA7D54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarrosUsadosAzureSearch.Infra.Data", "CarrosUsadosAzureSearch.Infra.Data\CarrosUsadosAzureSearch.Infra.Data.csproj", "{88A41FC4-F473-4920-BC25-580183DA7D54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{BE068117-E594-4DEF-A6EE-C1EA682CE74D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{A94ECD36-A314-4C8C-A26B-B9F372BB3798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrosUsadosAzureSearch.Application", "CarrosUsadosAzureSearch.Application\CarrosUsadosAzureSearch.Application.csproj", "{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +71,10 @@ Global
 		{88A41FC4-F473-4920-BC25-580183DA7D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88A41FC4-F473-4920-BC25-580183DA7D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88A41FC4-F473-4920-BC25-580183DA7D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +91,7 @@ Global
 		{5588BEAD-4CEA-4718-90A0-A54DED54667E} = {2FDA5067-5BFF-4483-B051-77D89B86E7FC}
 		{95710A50-130F-47EC-BB6F-7D7F4C183823} = {2F59611F-9B9A-44E6-B919-C95FA08D25C1}
 		{88A41FC4-F473-4920-BC25-580183DA7D54} = {EA6B7376-1656-4346-B6A5-1C6750377B71}
+		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D} = {A94ECD36-A314-4C8C-A26B-B9F372BB3798}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {521F8598-62EF-430F-AA17-4ABC035449EE}

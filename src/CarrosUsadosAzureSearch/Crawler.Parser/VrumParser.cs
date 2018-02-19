@@ -19,8 +19,14 @@ namespace Crawler.Parser
             var local = GetLocal(htmlDocument);
             var preco = GetValor(htmlDocument);
             var adicionais = GetAdicionais(htmlDocument);
+            var fonte = "Vrum";
+            
+            var ano = anokmcorportas[0] != null ? anokmcorportas[0] : string.Empty;
+            var km = anokmcorportas[1] != null && anokmcorportas.Count > 1 ? anokmcorportas[1] : string.Empty;
+            var cor = anokmcorportas[2] != null && anokmcorportas.Count > 2 ? anokmcorportas[2] : string.Empty;
+            var portas = anokmcorportas[3] != null && anokmcorportas.Count > 3 ? anokmcorportas[3] : string.Empty;
 
-            return new Carro(nome, descricao, anokmcorportas[0], anokmcorportas[1], anokmcorportas[2], Convert.ToInt32(anokmcorportas[3]), local, preco, adicionais);
+            return new Carro(nome, descricao, ano, km, cor, portas, local, preco, fonte, adicionais);
         }
 
         public bool IsPageValid(HtmlDocument htmlDocument)
@@ -31,7 +37,7 @@ namespace Crawler.Parser
                         .Contains("col-xs-7 col-sm-8 col-sxs-12 col-md-9"))
                     .SelectMany(div => div.Descendants("h1"));
 
-            return nome.Count > 0;
+            return nome.Count() > 0;
         }
 
         #region [ Métodos de Extração ]
@@ -45,7 +51,9 @@ namespace Crawler.Parser
                 .SelectMany(div => div.Descendants("h1"))
                 .FirstOrDefault();
 
-            return nome.InnerText.Replace("\t", "").Replace("\n", "");
+            var separator = new string[] { "&nbsp;" };
+
+            return nome.InnerText.Replace("\t", "").Replace("\n", "").Split(separator, StringSplitOptions.None)[0];
         }
 
         private string GetLocal(HtmlDocument htmlDocument)
@@ -86,8 +94,8 @@ namespace Crawler.Parser
         {
             var retorno = new List<string>();
             var items = htmlDocument.DocumentNode
-                .Descendants("div")
-                .Where(o => o.GetAttributeValue("span", "")
+                .Descendants("span")
+                .Where(o => o.GetAttributeValue("class", "")
                     .Contains("item-descricao-conteudo"))
                 .ToList();
 

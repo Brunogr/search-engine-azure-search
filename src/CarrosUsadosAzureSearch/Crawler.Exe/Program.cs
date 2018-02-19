@@ -25,6 +25,8 @@ namespace Crawler.Exe
             //pages[1] = "https://www.autoline.com.br/";
 
             crawler.StartCrawl(pages);
+
+            Console.ReadKey();
         }
         static void InitializeContainer(Container container)
         {

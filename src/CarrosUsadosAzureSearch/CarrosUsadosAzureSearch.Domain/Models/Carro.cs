@@ -7,18 +7,20 @@ namespace CarrosUsadosAzureSearch.Domain.Models
 {
     public class Carro
     {
-        public Carro(string nome, string detalhes, string ano, string km, string cor, int portas, string local, string preco, List<string> adicionais)
+        int _portas;
+        public Carro(string nome, string detalhes, string ano, string km, string cor, string portas, string local, string preco, string fonte, List<string> adicionais)
         {
             Id = Guid.NewGuid().ToString();
             Nome = nome;
             Detalhes = detalhes;
             Ano = ano;
             Km = km;
-            Portas = portas;
+            Portas = Int32.TryParse(portas, out _portas) ? _portas : 0;
             Adicionais = adicionais;
             Cor = cor;
             Local = local;
             Preco = preco;
+            Fonte = fonte;
         }
         [Key]
         [IsFilterable]
@@ -42,5 +44,7 @@ namespace CarrosUsadosAzureSearch.Domain.Models
         public string Local { get; set; }
         [IsSearchable, IsFilterable]
         public string Preco { get; set; }
+        [IsSearchable]
+        public string Fonte { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Cook.Crawler.Parser.Base
         public List<Carro> _carros;
         private ICarroParser _parser;
         private ICarroRepository _carroRepository;
+        private object _lock = new object();
 
         public ParserBase(ICarroRepository carroRepository)
         {
@@ -30,8 +31,11 @@ namespace Cook.Crawler.Parser.Base
 
             var carro = _parser.Extract(doc);
 
-            if (!_carros.Any(r => r.Nome == carro.Nome))
-                _carros.Add(carro);
+            lock (_lock)
+            {
+                if (!_carros.Any(r => r.Nome == carro.Nome))
+                    _carros.Add(carro);
+            }
         }
 
         public void IdentifyParser(string url)
