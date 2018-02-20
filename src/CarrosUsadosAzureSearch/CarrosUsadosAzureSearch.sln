@@ -35,7 +35,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{BE068117-E59
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{A94ECD36-A314-4C8C-A26B-B9F372BB3798}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrosUsadosAzureSearch.Application", "CarrosUsadosAzureSearch.Application\CarrosUsadosAzureSearch.Application.csproj", "{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarrosUsadosAzureSearch.Application", "CarrosUsadosAzureSearch.Application\CarrosUsadosAzureSearch.Application.csproj", "{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrosUsadosAzureSearch.Infra.IoC", "CarrosUsadosAzureSearch.Infra.IoC\CarrosUsadosAzureSearch.Infra.IoC.csproj", "{FF4DA4AA-F617-429F-8DD5-9F2D385A8ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrosUsadosAzureSearch.Api", "CarrosUsadosAzureSearch.Api\CarrosUsadosAzureSearch.Api.csproj", "{2872F4E2-4045-4C06-A255-F8B3D54C7791}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF4DA4AA-F617-429F-8DD5-9F2D385A8ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF4DA4AA-F617-429F-8DD5-9F2D385A8ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF4DA4AA-F617-429F-8DD5-9F2D385A8ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF4DA4AA-F617-429F-8DD5-9F2D385A8ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2872F4E2-4045-4C06-A255-F8B3D54C7791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2872F4E2-4045-4C06-A255-F8B3D54C7791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2872F4E2-4045-4C06-A255-F8B3D54C7791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2872F4E2-4045-4C06-A255-F8B3D54C7791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +104,8 @@ Global
 		{95710A50-130F-47EC-BB6F-7D7F4C183823} = {2F59611F-9B9A-44E6-B919-C95FA08D25C1}
 		{88A41FC4-F473-4920-BC25-580183DA7D54} = {EA6B7376-1656-4346-B6A5-1C6750377B71}
 		{B5123DE4-A640-4ABD-ACD6-2A431FA7246D} = {A94ECD36-A314-4C8C-A26B-B9F372BB3798}
+		{FF4DA4AA-F617-429F-8DD5-9F2D385A8ABC} = {EA6B7376-1656-4346-B6A5-1C6750377B71}
+		{2872F4E2-4045-4C06-A255-F8B3D54C7791} = {BE068117-E594-4DEF-A6EE-C1EA682CE74D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {521F8598-62EF-430F-AA17-4ABC035449EE}

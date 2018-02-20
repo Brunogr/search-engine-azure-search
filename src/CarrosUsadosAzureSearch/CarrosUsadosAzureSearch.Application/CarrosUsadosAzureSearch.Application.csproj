@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarrosUsadosAzureSearch.Domain\CarrosUsadosAzureSearch.Domain.csproj" />
+    <ProjectReference Include="..\Crawler.Core.Interface\Crawler.Core.Interface.csproj" />
+  </ItemGroup>
+
 </Project>

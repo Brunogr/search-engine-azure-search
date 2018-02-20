@@ -10,6 +10,6 @@ namespace Crawler.Core.Interface.Repository
     {
         void Save(IList<Carro> values);
 
-        IList<Carro> GetByWords(string words);
+        IList<Carro> Get(string words);
     }
 }

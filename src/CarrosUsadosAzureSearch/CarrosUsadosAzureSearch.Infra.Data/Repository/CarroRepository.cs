@@ -67,7 +67,7 @@ namespace CarrosUsadosAzureSearch.Infra.Data
             return results.Results;
         }
 
-        public IList<Carro> GetByWords(string words)
+        public IList<Carro> Get(string words)
         {
             var results = _searchIndexClient.Documents.Search<Carro>(words);
 
