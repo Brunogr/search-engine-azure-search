@@ -1,5 +1,5 @@
 # search-engine-azure-search
-Projeto desenvolvido para a palestra "Criando sua máquina de buscas com azure search" para o evento "Descomplicando o Azure" (02/2018).
+Projeto desenvolvido para a palestra "Criando sua máquina de buscas com azure search" para o evento "Descomplicando o Azure" (02/2018) e Azure Bootcamp (04/2018).
 
 # Tecnologias Utilizadas
 
